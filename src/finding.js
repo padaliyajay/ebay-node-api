@@ -18,7 +18,7 @@ const findItemsByKeywords = function (options) {
     const url = urlObject.buildSearchUrl(this.options);
     return getRequest(url).then((data) => {
         return JSON.parse(data).findItemsByKeywordsResponse;
-    }, console.error // eslint-disable-line no-console
+    } // eslint-disable-line no-console
     );
 };
 
@@ -34,7 +34,7 @@ const findItemsByCategory = function (options) {
     const url = urlObject.buildSearchUrl(this.options);
     return getRequest(url).then((data) => {
         return JSON.parse(data).findItemsByCategoryResponse;
-    }, console.error // eslint-disable-line no-console
+    } // eslint-disable-line no-console
     );
 };
 
@@ -51,7 +51,7 @@ const findCompletedItems = function (options) {
     const url = urlObject.buildSearchUrl(this.options);
     return getRequest(url).then((data) => {
         return JSON.parse(data).findCompletedItemsResponse;
-    }, console.error // eslint-disable-line no-console
+    } // eslint-disable-line no-console
     );
 };
 
@@ -68,7 +68,7 @@ const findItemsAdvanced = function (options) {
     const url = urlObject.buildSearchUrl(this.options);
     return getRequest(url).then((data) => {
         return JSON.parse(data).findItemsAdvancedResponse;
-    }, console.error // eslint-disable-line no-console
+    } // eslint-disable-line no-console
     );
 };
 
@@ -78,7 +78,7 @@ const getVersion = function () {
     const url = urlObject.buildSearchUrl(this.options);
     return getRequest(url).then((data) => {
         return JSON.parse(data).getVersionResponse[0];
-    }, console.error // eslint-disable-line no-console
+    } // eslint-disable-line no-console
     );
 };
 
@@ -95,7 +95,7 @@ const findItemsByProduct = function (options) {
     const url = `${urlObject.buildSearchUrl(this.options)}&productId.@type=${type}`;
     return getRequest(url).then((data) => {
         return JSON.parse(data).findItemsByProductResponse;
-    }, console.error // eslint-disable-line no-console
+    } // eslint-disable-line no-console
     );
 };
 
@@ -106,7 +106,7 @@ const findItemsIneBayStores = function (options) {
     this.options.additionalParam = utils.constructAdditionalParams(options);
     return getRequest(urlObject.buildSearchUrl(this.options)).then((data) => {
         return JSON.parse(data).findItemsIneBayStoresResponse;
-    }, console.error // eslint-disable-line no-console
+    } // eslint-disable-line no-console
     );
 };
 
