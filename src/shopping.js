@@ -5,7 +5,7 @@ const urlObject = require('./buildURL');
 const makeString = require('make-string');
 
 const getAllCategories = function (categoryID) {
-    const requestURL = `${urlObject.buildShoppingUrl(this.options, 'GetCategoryInfo')}&${stringifyUrl({ 'CategoryID': categoryID || -1 })}`;
+    const requestURL = `${urlObject.buildShoppingUrl(this.options, 'GetCategoryInfo')}&${stringifyUrl({ 'CategoryID': categoryID || -1 , 'IncludeSelector': 'ChildCategories'})}`;
     return getRequest(requestURL).then((data) => {
         return JSON.parse(data);
     }, console.error // eslint-disable-line no-console
